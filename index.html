@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chiffrement de Vigenère</title>
+    <script src="./index.js"></script>
+
+    <style>
+      #res {
+        width: 100%;
+        margin-left: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Chiffrement de Vigenère</h1>
+    <ul id="errors"></ul>
+    <input
+      placeholder="Message"
+      type="text"
+      name="message"
+      id="message"
+      class="input"
+    />
+    <input
+      placeholder="Key"
+      type="text"
+      name="key"
+      id="key"
+      class="input key-input"
+    />
+    <button type="button" id="chiffrer" onclick="handleChiffrer()">
+      Chiffrer
+    </button>
+    <input type="checkbox" name="spaces" id="spaces" value="keep spaces" />
+    <label for="spaces">Keep spaces</label>
+    <br /><br />
+    <div id="res" style="display: none">
+      <h5>Le texte chiffré:</h5>
+      <h2 id="result"></h2>
+    </div>
+  </body>
+</html>
